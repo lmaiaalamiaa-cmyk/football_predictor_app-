@@ -1,21 +1,28 @@
-name: football_predictor_app
-description: نتائج مباشرة + توقعات بالذكاء الاصطناعي
-publish_to: 'none'
+
+name: ai_match_pro
+description: AI MATCH PRO Football App
+publish_to: "none"
+
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: ">=3.3.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.2
-  intl: ^0.19.0
+
+  flutter_localizations:
+    sdk: flutter
+
+  http: ^1.3.0
+  intl: ^0.20.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: ^5.0.0
 
 flutter:
   uses-material-design: true
+  
