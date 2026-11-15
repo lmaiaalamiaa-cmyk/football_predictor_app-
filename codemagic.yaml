@@ -1,7 +1,7 @@
 
 workflows:
   android-apk:
-    name: AI MATCH PRO Android
+    name: AI MATCH PRO Android APK
 
     max_build_duration: 60
 
@@ -11,13 +11,17 @@ workflows:
       flutter: stable
 
     scripts:
+      - name: Generate Android files
+        script: |
+          flutter create --platforms=android --org com.aimatchpro .
+
       - name: Get packages
         script: flutter pub get
 
       - name: Analyze project
         script: flutter analyze
 
-      - name: Build APK
+      - name: Build Android APK
         script: |
           flutter build apk --release \
             --dart-define=API_FOOTBALL_KEY=$API_FOOTBALL_KEY
